@@ -16,3 +16,18 @@
 :books:**[CSS学习](http://phpstudy.php.cn/css3/)**
 
 :books:**[JavaScript学习](http://www.runoob.com/js/js-tutorial.html)**
+
+**对于JavaScript学习网络资源不够完整，建议查看书籍，购买地址，可以购买更高版本：**
+
+
+:books:**[JavaScript高级程序设计](https://detail.tmall.com/item.htm?id=565462419446&ali_trackid=2:mm_47614295_4288816_317308348:1536500718_114_866180205&spm=a2e2e.10720394/c.90200100.1.12ce704clM99vJ)**
+
+**当然网上也有PDF文档，可以搜索到。**
+
+:books:**[Jquery学习](http://www.runoob.com/jquery/jquery-tutorial.html)**
+
+:books:**[Bootstrap学习](http://www.runoob.com/bootstrap/bootstrap-tutorial.html)**
+
+:books:**[Node.js学习](http://www.runoob.com/nodejs/nodejs-tutorial.html)**
+
+:books:**[Vue.js学习](http://www.runoob.com/vue2/vue-tutorial.html)**
