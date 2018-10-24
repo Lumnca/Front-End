@@ -68,7 +68,7 @@
 
 [学习参考](https://cn.vuejs.org/v2/guide/instance.html)
 
-
+* [Vue模板语法](https://github.com/Lumnca/StudyFrontEnd/blob/master/%E6%A8%A1%E6%9D%BF%E8%AF%AD%E6%B3%95.html)
 
 
 
