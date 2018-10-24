@@ -8,7 +8,7 @@
 ## :panda_face:推荐路线
 **1.先学习基本的知识HTML->CSS->JavaScript**
 
-**2.后者要在上面的基础上才行jquery->bootstrap->node->vue**
+**2.后者要在上面的基础上才行jquery->bootstrap->node->vue->React**
 
 ## 学习链接
 :books:**[HTML学习](http://www.runoob.com/html/html-tutorial.html)**
@@ -31,3 +31,5 @@
 :books:**[Node.js学习](http://www.runoob.com/nodejs/nodejs-tutorial.html)**
 
 :books:**[Vue.js学习](http://www.runoob.com/vue2/vue-tutorial.html)**
+
+:books:**[React学习](http://www.runoob.com/react/react-tutorial.html)**
