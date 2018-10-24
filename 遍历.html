@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-1.9.0.min.js"></script>
+	</head>
+	<body>
+		<div class="start">
+			<h1>Title</h1>
+			<p>one</p>
+			<p class="fil">two</p>
+			<p>three</p>
+			<article>------</article>
+			<div class="middle">
+				<span>four</span>
+				<p>five</p>
+			</div>
+			<button>Simbut</button>
+		</div>
+		<script>
+			
+			$("button").click(function(){
+				//单层父级
+				//$("span").parent().css("color","#FF0000");
+				//所有父级
+				//$("span").parents().css("color","#FF0000");
+				//介于两者之间
+				//$("h1").parentsUntil("article").css("color","#FF0000");
+				//children() 方法返回被选元素的所有直接子元素。
+				//$(".start").children().css("color","#FF0000");
+				//find() 方法返回被选元素的后代元素，一路向下直到最后一个后代。
+				//$("body").find("div").css("color","#FF0000");
+				//siblings() 方法返回被选元素的所有同胞元素。
+				//$("span").siblings().css("color","#FF0000");
+				//children() 方法返回被选元素的所有直接子元素。
+				//$(".middle").children().css("color","#FF0000");
+				//next() 方法返回被选元素的下一个同胞元素。只返回一个
+				//$("h1").next().css("color","#FF0000");
+				//nextAll() 方法返回被选元素的所有跟随的同胞元素。
+				//$("h1").nextAll().css("color","#FF0000");
+				//nextUntil() 方法返回介于两个给定参数之间的所有跟随的同胞元素。
+				//$("h1").nextUntil(".middle").css("color","#FF0000");
+				//first() 方法返回被选元素的首个元素。
+				//$("p").first().css("color","#FF0000");
+				//last() 方法返回被选元素的最后一个元素。
+				//$("p").last().css("color","#FF0000");
+				//eq()方法返回被选元素中带有指定索引号的元素,索引号从 0 开始，因此首个元素的索引号是 0 而不是 1。下面的例子选取第二个 <p> 元素（索引号 1）：
+				//$("p").eq(3).css("color","#FF0000");
+				//filter() 方法允许您规定一个标准。不匹配这个标准的元素会被从集合中删除，匹配的元素会被返回。
+				//$("p").filter(".fil").css("color","#FF0000");
+				//not() 方法返回不匹配标准的所有元素。not() 方法与 filter() 相反。
+				//$("p").not(".fil").css("color","#FF0000");
+			});
+			
+		</script>
+	</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-1.9.0.min.js"></script>
+	</head>
+	<body>
+		<h1>Title</h1>
+		<p>act1</p>
+		<p>act2</p>
+		<p class="end">act3</p>
+		<ol>
+			<li>11</li>
+			<li>22</li>
+			<li>33</li>
+		</ol>
+		
+		<button class="but1">添加文本</button>
+		<button class="but2">删除</button>
+		
+		<script>
+			$(".but1").click(function(){
+				//添加文本与尾部
+				//$(".end").append("THE END");
+				//添加文本与开头
+				//$(".end").prepend("Start");
+				//添加标签
+				//$(".end").append("<p>act3</p>");
+				
+				//after/before 等价方法
+				$(".end").before("Start");
+				//添加标签
+				$(".end").after("<p>act3</p>");
+				
+			});
+				$(".but2").click(function(){
+					//删除元素
+					$("h1").remove();
+					//删除子元素
+					$("ol").empty();
+				})
+		</script>
+	</body>
+</html>

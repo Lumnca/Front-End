@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-1.9.0.min.js"></script>
+	</head>
+	<style>
+		div{
+			margin: auto;
+			width: 800px;
+			height: 100px;
+			padding:400px;
+			font-weight: 50px;
+			font-size: 30px;
+			display: none;
+			border: 1px solid;
+			background: #9ACD32;
+			text-align: center;
+		}
+	</style>
+	<body>
+		<button>点击</button>
+		<div>Hello World!</div>
+	</body>
+	<script>
+		//下滑弹出
+		/*$("button").click(function(){
+			$("div").slideDown(1000);
+		});*/
+		/*上滑收缩
+		$("button").click(function(){
+			$("div").slideUp(1000);
+		});
+		*/
+		//相互交换
+		$("button").click(function(){
+			$("div").slideToggle(1000);
+		});
+	</script>
+</html>

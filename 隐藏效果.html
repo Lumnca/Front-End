@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-1.9.0.min.js"></script>
+		
+	</head>
+	<body>
+		<p>11111111111111111111111111111111111111</p>
+		<button class="b1">显示</button>
+		<button class="b2">隐藏</button>
+		<button class="b3">显示/隐藏</button>
+	</body>
+	<script>
+		$(".b1").click(function(){
+			$("p").show();
+		});
+		$(".b2").click(function(){
+			//提交延时参数，会有过渡动画
+			$("p").hide(2000);
+		});
+		//相互转换
+		$(".b3").click(function(){
+			$("p").toggle(1000);
+		});
+		//括号提供参数表示延时
+	</script>
+</html>

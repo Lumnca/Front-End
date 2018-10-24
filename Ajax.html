@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-1.9.0.min.js"></script>
+	</head>
+	<body>
+		<p></p>
+		<img />
+		<div></div>
+		<button>Simbit</button>
+	</body>
+	<script>
+		
+		
+	
+		$("button").click(function(){
+		  $.get("事件.html",function(data,status){
+		    alert("数据: " + data + "\n状态: " + status);
+		  });
+		});
+
+	
+	</script>
+</html>

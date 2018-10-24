@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-1.9.0.min.js"></script>
+		<style>
+			
+			.textstyle{
+				color: black;
+			}
+			.oper{
+				opacity: 0.5;
+				
+			}
+		</style>
+	</head>
+	<body>
+		<div>
+			<h1>Title</h1>
+			<p>text 1</p>
+			<p>text 2</p>
+		</div>
+		
+		<button class="f1">添加样式</button>
+		
+		<button class="f2">移除样式</button>
+		<script>
+			$(".f1").click(function(){
+				$("h1,p").addClass("textstyle");
+				$("*").addClass("oper");
+				
+			});
+			$('.f2').click(function(){
+				$("h1,p").removeClass("textstyle");
+				$("*").removeClass("oper");
+			});
+			//css方法
+			$("p").css("color","#FF0000");
+			$("div").css({"background":"aqua"});
+		</script>
+	</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-1.9.0.min.js"></script>
+	</head>
+	<body>
+		<p>I am a Students</p>
+		<button>sumbit</button>
+		<script>
+			/*
+			 * 函数镶嵌
+			$("button").click(function(){
+				$('p').hide(function(){
+					alert("axaax");
+				})
+			})
+			*/
+			//使用.链接继续函数
+			$("button").click(function(){
+				$('p').css("color","red").hide(1000).show(1000);
+			})
+		</script>
+	</body>
+</html>

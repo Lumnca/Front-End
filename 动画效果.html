@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-1.9.0.min.js"></script>
+		<style>
+			.d1{
+				position: absolute;
+				left: 500px;
+				top: 100px;
+				width: 100px;
+				height: 100px;
+				background: #9ACD32;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="d1">点击动画</div>
+		<button class="b4">按下动画</button><br>
+				<br>
+		<br>
+		<button class="b5">连续动画</button><br>
+		
+		<br>
+		<button class="b7">停止动画</button>
+		<button class="b6">图集动画</button><br>
+		<br>
+		<br>
+		<br>
+		<img src="img/bullets24-1.png" id="m" />
+	</body>
+	<script>
+		$(".d1").click(function(){
+			$(".d1").animate({	
+				left:'250px',
+			    height:'+=150px',
+			    width:'+=150px'
+			});
+		});
+		$(".b4").click(function(){
+			$(".d1").animate(({
+				height:'toggle'
+			}),5000)
+		})
+		$(".b5").click(function(){
+			var div=$(".d1");
+			//第二参数为动画延时
+			div.animate({height:'300px',opacity:'0.4'},"slow");
+			div.animate({width:'300px',opacity:'0.8'},"slow");
+			div.animate({height:'100px',opacity:'0.4'},"slow");
+			div.animate({width:'100px',opacity:'0.8'},"slow");
+		})
+		/*$(".b6").click(function(){
+			var img = $("img");
+			img.src = "img/bullets24-3.png";
+		})*/
+		$(".b7").click(function(){
+			$(".d1").stop(true);
+		})
+	</script>
+</html>

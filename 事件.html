@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-1.9.0.min.js"></script>
+		<style>
+			.div1{
+				width: 200px;
+				height: 200px;
+				background: yellowgreen;
+			}
+		</style>
+	</head>
+	<body>
+		<button class="thing1">按钮</button>
+		<button class="thing2">按钮</button>
+		<br>
+		<br>
+		<div class="div1"></div>
+		<br />
+		<br />
+		<br />
+		<input type="text" class="t" />
+		<p class="txt">按键的次数: <span>0</span></p>
+		<br />
+		<br />
+		<br />	
+		<form>
+			<input type="text" class="r"/>
+			<p class="txt1">按键的次数: <span class="o">0</span></p>
+			<button>提交</button>
+		</form>
+	</body>
+	<script>
+		//单击
+		$(".thing1").click(function(){
+			$(this).css("color","red");
+		})
+		//双击
+		$(".thing2").dblclick(function(){
+			$(this).css("color","aqua");
+		})
+		//鼠标移入
+		/*
+		$(".div1").mouseenter(function(){
+			$(this).css("background","aqua");
+		})
+		//鼠标移除
+		$(".div1").mouseleave(function(){
+			$(this).css("background","yellow");
+		})
+		*/
+		//按键被按下
+		var i = 0,j = 0;
+		$(".t").keypress(function(){
+			i = i+1;
+		    $("span").text(i);
+		});
+		//按下过程
+		/*$(".r").keydown(function(){
+			j = j+1;
+		    $(".o").text(j);
+		});*/
+		//释放按键
+		$(".r").keyup(function(){
+			j = j+1;
+		    $(".o").text(j);
+		});
+		//hover,传入一个参数只有一个鼠标进入函数
+		$(".div1").hover(function(){
+			$(this).css("background","aqua");
+		});
+		//传入两个，可以实现全部
+		$(".div1").hover(function(){
+			$(this).css("background","aqua");
+		},function(){
+			$(this).css("background","yellow");
+		});
+		//表单事件
+		$(document).ready(function(){
+			$("form").submit(function(){
+				alert("OK");
+			})
+		})
+		$("button").onclick(function(){
+			$("form").submit();
+		})
+	</script>
+</html>

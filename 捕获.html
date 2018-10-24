@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-1.9.0.min.js"></script>
+	</head>
+	<style>
+		.di{
+			color: #9ACD32;
+			font-size: 20px;
+		}
+		.hhh{
+			color: red;
+		}
+	</style>
+	<body>
+		<div class="di" >
+<h1>标题</h1>
+<p>I am a Student</p>
+<p>Hello World</p>
+<p>This is JQuery</p>
+		</div>
+		
+		<article class="mm">22222</article>
+		<input type="text"  />
+		<button>Sumbit</button>
+		<br />
+		<span>Sumbit</span>
+		<script>
+			/*
+			$("button").click(function(){
+				//读类容不包括标签
+				alert("文本类容为:"+$('div').text());
+				//包括标签
+				alert("网页形式为:"+$("div").html());
+				//属性类容
+				alert($('div').attr("class"));
+			})
+			$("span").click(function(){
+				//表单返回
+				alert($("input").val());
+			})*/
+			//在捕获下也可以修改
+			$("button").click(function(){
+				//修改文本
+				$("p").text("HEllO");
+				//修改标签
+				$("div").html("<b>111111<b>");
+				//
+				$(".mm".attr("class","hhh"));
+			})
+			
+		</script>
+	</body>
+</html>
