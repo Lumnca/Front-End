@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	</head>
+	<script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+	<style>
+	</style>
+	<body>
+		<!--插入数据，采用双大括号,必须在vue中el指定的数据中添加 -->
+		<div id="data">
+			<p>{{text1}}</p>
+			<p >{{text2}}</p>
+			<p >{{text3}}</p>
+			<p>{{a}}</p>
+			<!--函数引用 -->
+			<p>{{Show()}}</p>
+			<!--另一种插入方式会覆盖里面原本内容,可以输出标签,前面那种插入不能插入标签-->
+			<span v-html="text1">!!!!</span>
+			<div v-html="message"></div>
+		</div>
+		<div id="base">
+			<h2>{{title}}</h2>
+			<p>{{p1}}</p>
+			<p>{{p2}}</p>
+		</div>
+		<script>
+			// 我们的数据对象
+			var AddData = {
+			  	text1 :"Hello World!",
+			  	text2 :"开始学习vue.js",
+			  	text3 : 20181023,
+			  	message : "<h3>这是标题</h3>"
+			 };
+			// 该对象被加入到一个 Vue 实例中
+			var vm = new Vue({
+			  el: '#data',
+			  //添加方式一
+			  /*data :{
+			  	text1 :"Hello World!",
+			  	text2 :"开始学习vue.js",
+			  	text3 : 20181023,
+			  	message : "<h3>这是标题</h3>"
+			  },*/
+			 //添加方式二
+			 data : AddData,
+			  methods : {
+			  	Show : function(){
+			  		return this.text1+"   "+this.text3+"   "+this.text2;
+			  	}
+			  }	 
+			})
+			//外部引用vue参数
+			//alert(vm.$data.text1);
+			//var s = vm.Show();
+			//alert(s);
+			//多个vue插入
+			var newvm = new Vue({
+				el :'#base',
+				data : {
+					title : "标题",
+					p1 : "第一段",
+					p2 : "第二段"
+				}
+			})
+		</script>
+	</body>
+</html>
