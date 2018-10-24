@@ -64,10 +64,9 @@
 
 * [JQuery Ajax](https://github.com/Lumnca/StudyFrontEnd/blob/master/Ajax.html)
 
+## (重要)Vue.js ##
 
-
-
-
+[学习参考](https://cn.vuejs.org/v2/guide/instance.html)
 
 
 
