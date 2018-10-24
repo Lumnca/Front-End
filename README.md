@@ -50,6 +50,21 @@
 
 * [JQuery滑动](https://github.com/Lumnca/StudyFrontEnd/blob/master/%E6%BB%91%E5%8A%A8%E6%95%88%E6%9E%9C.html)
 
+* [JQuery动画](https://github.com/Lumnca/StudyFrontEnd/blob/master/%E5%8A%A8%E7%94%BB%E6%95%88%E6%9E%9C.html)
+
+* [JQuery Callback和链](https://github.com/Lumnca/StudyFrontEnd/blob/master/Callback%E5%92%8C%E9%93%BE.html)
+
+* [JQuery捕获](https://github.com/Lumnca/StudyFrontEnd/blob/master/%E6%8D%95%E8%8E%B7.html)
+
+* [JQuery添加元素及删除](https://github.com/Lumnca/StudyFrontEnd/blob/master/%E6%B7%BB%E5%8A%A0%E5%8F%8A%E5%88%A0%E9%99%A4%E5%85%83%E7%B4%A0.html)
+
+* [JQuery CSS类](https://github.com/Lumnca/StudyFrontEnd/blob/master/CSS%E7%B1%BB.html)
+
+* [JQuery遍历](https://github.com/Lumnca/StudyFrontEnd/blob/master/%E9%81%8D%E5%8E%86.html)
+
+* [JQuery Ajax](https://github.com/Lumnca/StudyFrontEnd/blob/master/Ajax.html)
+
+
 
 
 
