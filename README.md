@@ -34,8 +34,21 @@
 
 :books:**[React学习](http://www.runoob.com/react/react-tutorial.html)**
 
+***
+
 # :monkey:学习笔记
 
+## Jquery ##
+
+* [Jquery选择器](https://github.com/Lumnca/StudyFrontEnd/blob/master/%E9%80%89%E6%8B%A9%E5%99%A8.html)
+
+* [Jquery事件](https://github.com/Lumnca/StudyFrontEnd/blob/master/%E4%BA%8B%E4%BB%B6.html)
+
+* [JQuery隐藏与显示](https://github.com/Lumnca/StudyFrontEnd/blob/master/%E9%9A%90%E8%97%8F%E6%95%88%E6%9E%9C.html)
+
+* [JQuery淡入淡出](https://github.com/Lumnca/StudyFrontEnd/blob/master/%E6%B7%A1%E5%85%A5%E6%B7%A1%E5%87%BA%E6%95%88%E6%9E%9C.html)
+
+* [JQuery滑动](https://github.com/Lumnca/StudyFrontEnd/blob/master/%E6%BB%91%E5%8A%A8%E6%95%88%E6%9E%9C.html)
 
 
 
