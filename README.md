@@ -68,7 +68,9 @@
 
 [学习参考](https://cn.vuejs.org/v2/guide/instance.html)
 
-* [Vue模板语法](https://github.com/Lumnca/StudyFrontEnd/blob/master/%E6%A8%A1%E6%9D%BF%E8%AF%AD%E6%B3%95.html)
+* [1.Vue模板语法   ](https://github.com/Lumnca/StudyFrontEnd/blob/master/%E6%A8%A1%E6%9D%BF%E8%AF%AD%E6%B3%95.html)**主要内容：插入Vue，在html中添加元素，数据，变量.**
+
+
 
 
 
