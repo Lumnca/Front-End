@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+	</head>
+	<body>
+		<div id="app">
+		    <p v-if="show1">该段的值为false，所以被隐藏</p>
+		    <!--整体隐藏  -->
+		    <div v-if="show2">
+		      <h1>标题</h1>
+		      <p>段落一</p>
+		      <p>段落二</p>
+		    </div>
+		    <!--条件判断 -->
+			<h1 v-if="show1">Yes</h1>
+			<h1 v-else>No</h1>
+			<!--表达式判断 -->
+			<p v-if="Math.random()>0.5">随机数大于0.5</p>
+			<p v-else>随机数小于0.5</p>
+			<!--条件分支-->
+			<p v-if="Math.random()>0&&Math.random()<=0.4">0~0.4</p>
+			<p v-else-if="Math.random()>0.4&&Math.random()<0.8">0.4~0.8</p>
+			<p v-else>0.8~1</p>
+			<hr>
+			<!--显示方式   但是v-show 不支持 <template> 元素，也不支持 v-else。-->
+			<p v-show="show1">SHow</p>
+			<p v-show="show2">Show</p>
+			
+			<!--实时切换元素-->
+			<template v-if="loginType">
+			  <label>Username</label>
+			  <input placeholder="Enter your username">
+			</template>
+			<template v-else>
+			  <label>Email</label>
+			  <input placeholder="Enter your email address" >
+			</template>
+			<br><br>
+			<!--vue可以实时转换-->
+			<button onclick="show()">切换方式</button>
+		</div>
+		    
+		<script>
+			var vm = new Vue({
+			  el: '#app',
+			  data: {
+			  	//false值为假在标签属性中为不显示该标签
+			    show1: false,
+			    //true值为真在标签属性中为显示该标签
+			    show2: true,
+			    loginType  : false
+			  }
+			})
+				
+			function show(){		
+				vm.$data.loginType = true;
+			}
+		</script>
+	</body>
+</html>

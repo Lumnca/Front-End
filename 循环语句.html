@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+	</head>
+	<body>
+		<div id="app">
+			<!--循环方式一 :迭代式循环，迭代命名加数组里面的命名-->
+		    <li v-for="item1 in sites">
+		      {{ item1.name }}
+		    </li>
+			<hr>	
+			<!--迭代方式二：传入循环参数和索引值-->
+			<li v-for="(item2, index) in sites">
+			    {{ index }} --- {{ item2.name }}
+			</li>
+			<hr>
+			<!--迭代对象-->
+			<li v-for="item in Student">
+				{{item}}
+			</li>
+			<hr>
+			<!--也可以使用两个参数 使用的参数自由命名-->
+			<!--第一参数为迭代项，第二项为迭代属性,第三项为索引值，后面两个参数可以没有-->
+			<li v-for="(item3,key,index) in Student">
+				
+				{{index}}---------- {{key}} : {{item3}}
+			</li>
+			<hr>
+			<!--循环5次，使用整数循环-->
+			<li v-for="p in 5">
+				{{p}}
+			</li>
+			<hr>
+			<h2>数组更新检测</h2>
+			<li v-for="item4 in Nums">
+				{{item4}}
+			</li>
+			
+			<button onclick="ArrayPush()">传入一个数组</button>
+			|
+			<button onclick="ArrayPop()">删除一个数组</button>
+			
+			<hr>
+			
+			<p v-for="item6 in SomeNums">
+				{{item6}}
+			</p>
+			<button onclick="SortNums()">重新顺序排布</button>
+			<button onclick="RecerNums()">重新倒序排布</button>
+			<button onclick="Splice()">插入数据</button>
+		</div>
+
+		<script>
+		var vm = new Vue({
+		  el: '#app',
+		  data: {
+		  	//列表数组声明形式
+		    sites: [
+		      { name: '第一个' },
+		      { name: '第二个' },
+		      { name: '第三个' }
+		    ],
+		    len : 3,
+		    //数组声明另一种形式
+		    Nums : [1,2,3],
+		    SomeNums : [1,6,9,7,6,4],
+		    //列表对象声明形式
+		    Student : {
+		    	name : "Lumnca",
+		    	id : 2017110329,
+		    	sex : '男',
+		    	age : 20
+		    }
+		  }
+		});
+		
+		function ArrayPush(){
+			vm.$data.len++;
+			//push从尾部传入数组，需要一个参数
+			var n = vm.$data.Nums.push(vm.$data.len);
+			alert(vm.$data.len);
+		}
+		function ArrayPop(){
+			//从尾部删除一个数组
+			var n = vm.$data.Nums.pop();
+			vm.$data.len--;
+			alert(vm.$data.len);
+		}
+		function SortNums(){
+			//升序排布
+			vm.$data.SomeNums.sort();
+		}
+		function RecerNums(){
+			//逆转排布
+			vm.$data.SomeNums.reverse();
+		}
+		function Splice(){
+			//替换数组
+			vm.$data.SomeNums.splice(1,3,5);
+		}
+		//JS中 vm.items[1] = 'x' // 不是响应性的
+        //vm.items.length = 2 // 不是响应性的
+        //修改数组 ，第一个参数数组，第二个参数索引位，第三个修改值
+        Vue.set(vm.$data.Nums, 0, 9999);
+        //或者使用Splice第一个参数索引开始位，第二个参数索引位开始位数，第三个修改值
+        vm.$data.Nums.splice(1, 1, 8888);
+        //使用vm.$set方式
+        vm.$set(vm.$data.Nums, 2, 7777);
+        //改变数组大小
+        vm.$data.Nums.splice(100);
+		</script>
+	</body>
+</html>
