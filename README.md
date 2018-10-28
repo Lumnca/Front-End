@@ -79,7 +79,7 @@
 
 * [5.Vue表单绑定](https://github.com/Lumnca/StudyFrontEnd/blob/master/%E8%A1%A8%E5%8D%95%E7%BB%91%E5%AE%9A.html)**主要内容：表单的实时渲染**
 
-* [6.Vue样式绑定](https://github.com/Lumnca/StudyFrontEnd/blob/master/%E6%A0%B7%E5%BC%8F%E7%BB%91%E5%AE%9A.html)**样式的取用方式**
+* [6.Vue样式绑定](https://github.com/Lumnca/StudyFrontEnd/blob/master/%E6%A0%B7%E5%BC%8F%E7%BB%91%E5%AE%9A.html)**主要内容：样式的取用方式**
 
 
 
