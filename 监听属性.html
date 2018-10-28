@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+	</head>
+	<style>
+		.c1{
+			width: 400px;height: 400px;
+			background: yellow;
+		}
+		.c2{
+			width: 200px;height: 200px;
+			background: red;
+		}
+		.c3{
+			width: 100px;height: 100px;
+			background: aqua;
+		}
+		#mouse{
+			width: 200px;
+			height: 200px;
+			background: #FFFF00;
+		}
+	</style>
+	<body>
+		<div id = "app">
+			 <p>计数器: {{ counter }}</p>
+			 <!--使用v-on监听 -->
+			 <button v-on:click= "counter++">点击数据加1</button>
+			 
+			 <p>弹出类容</p>
+			 <!--缩写形式 -->
+			 <button @click="greet">Simbit</button>
+			 <p>改变数据</p>
+			 <button v-on:click= "add">点击数据加1</button>
+			 <!--内联处理器中的方法-->
+			 <p>含参数改变数据(内联处理器中的方法)</p>
+			 <button v-on:click= "add(2)">点击数据加2</button>
+			 <h2>事件修饰符</h2>
+			 <button v-on:click="someThings">点击</button>
+			<!--防止冒泡-->
+			<!-- .stop阻止事件继续传播 -->
+			<div class="c1" v-on:click.stop="thing1">
+				<div class="c2" v-on:click.stop="thing2">
+					<div class="c3" v-on:click.stop="thing3"></div>
+				</div>
+			</div>
+			<hr>
+			<!--只触发一次 -->
+			<button v-on:click.once="once">只会作用一次</button>
+			<!--
+				阻止单击事件冒泡 
+				<a v-on:click.stop="doThis"></a>
+				
+				提交事件不再重载页面 
+				<form v-on:submit.prevent="onSubmit"></form>
+				
+				修饰符可以串联  
+				<a v-on:click.stop.prevent="doThat"></a>
+				
+				 只有修饰符 
+				<form v-on:submit.prevent></form>
+				
+				 添加事件侦听器时使用事件捕获模式 
+				<div v-on:click.capture="doThis">...</div>
+				
+				 只当事件在该元素本身（而不是子元素）触发时触发回调
+				<div v-on:click.self="doThat">...</div>	
+				
+				 click 事件只能点击一次，2.1.4版本新增 
+				<a v-on:click.once="doThis"></a>
+            -->
+			
+			
+			
+			
+			
+			<hr />
+			<!--可以使用键码 v-model为显示类容  placeholder初始提示，输入消失 -->
+			键盘输入：<input v-on:keydown="getKeyCode()" placeholder="输入"/>
+			返回键码：<input id="output" v-model="oneKey"/>
+			<hr>
+			<h2>组合键 .exact</h2>
+			<!--含有触发-->
+				
+			<button @click.ctrl="once">按Ctrl键加任意键点击触发</button>
+			<!--唯一触发-->
+			<button @click.ctrl.exact="once">只能按Ctrl键点击触发</button>
+			<!--解除组合-->
+			<button @click.exact="once">点击触发</button>
+			
+			<h2>鼠标按键触发</h2>
+			
+			<div id="mouse" @click.middle="once">响应区域</div>
+			<!--
+			<div id="mouse" @click.right="once">响应区域</div>
+			<div id="mouse" @click.left="once">响应区域</div>
+            -->
+            <h2>转换实例</h2>
+            <!--使用watch改变-->
+            g:<input v-model="g" />
+            Kg:<input v-model="kg" />
+
+		</div>
+		<div id="st" style="background: aqua; width: 100px;height: 20px; padding: 20px;position: absolute;top: 20%; left: 43%;"  v-if="flag">
+			<button v-on:click.stop="show">再次点击按钮</button>
+		</div>
+		<script type = "text/javascript">
+		    var st = new Vue({
+		    	el : "#st",
+		    	data : {
+		    		flag : false
+		    	},
+		    	methods : {
+		    		show : function(){
+		    			alert("冒牌事件是否触发？");
+		    		}
+		    	}
+		    })
+			var vm = new Vue({
+			  el: '#app',
+			  data: {
+			  	counter : 1,
+			    name: 'Vue.js',
+			    kg : 0,
+			    g : 0,
+			    oneKey : ''
+			  },
+			  // 在 `methods` 对象中定义方法
+			  methods: {
+			    greet: function (event) {
+			      // `this` 在方法里指向当前 Vue 实例
+			      alert('Hello ' + this.name + '!')
+			      // `event` 是原生 DOM 事件
+			      if (event) {
+			      	//返回标签名
+			        alert(event.target.tagName)
+			      }
+			    },
+			    add : function(){
+			    	//数组参数个数
+			    	if(arguments==0)
+			    	vm.$data.counter++;
+			    	else
+			    	vm.$data.counter+=arguments[0];
+			    },
+			    someThings :function(){
+			    	st.$data.flag=true;
+		    	
+			    },
+			    thing3 : function(){
+			    	var c3 = document.getElementsByClassName('c3')[0];
+			    	c3.style.display="none";
+			    },
+			    thing2 : function(){
+			    	var c2 = document.getElementsByClassName('c2')[0];
+			    	c2.style.display="none";
+			    },
+			    thing1 : function(){
+			    	var c1 = document.getElementsByClassName('c1')[0];
+			    	c1.style.display="none";
+			    },
+			    once : function(){
+			    	alert("只弹出一次额");
+			    },
+			    getKeyCode : function(e){	
+			    	//键盘事件
+			    	e = window.event;
+			    	vm.$data.oneKey = e.keyCode;
+			    }
+			  },
+			  //针对数据改变做出响应
+			  watch : {
+			  	//val为改变的数据
+			  	 kg : function(val){
+			  	 	vm.$data.kg = val;
+			  	 	vm.$data.g = val*1000;
+			  	 },
+			  	 g : function(val){
+			  	 	vm.$data.g = val;
+			  	 	vm.$data.kg = val/1000;
+			  	 }
+			  }
+			})
+		</script>
+	</body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+	</head>
+	<body>
+		<div id="ex1">
+				<!--model 绑定元素数据，数据更新还改变值-->
+				<h3>1.单行文本的输入</h3>
+				<input v-model="Message1"  />
+				<p>你输入了:{{Message1}}</p>
+				<!--多行文本的显示-->
+				<h3>2.多行文本的输入</h3>
+				<textarea v-model="Message2" ></textarea>
+				<!--通过style属性中的white-space属性完成换行-->
+				<p style="white-space: pre-line;">你输入了:{{Message2}}</p>
+				<h3>3.复选框</h3>
+				<p>单个复选框绑定的是布尔值</p>
+				<input type="checkbox" v-model="Message3"/>
+				<p>上面的复选框的值：{{Message3}}</p>
+				<p>多个复选框绑定的是同一个数组</p>
+				<input type="checkbox" v-model="Messages" value="1"/>1号
+				<input type="checkbox" v-model="Messages" value="2"/>2号
+				<input type="checkbox" v-model="Messages" value="3"/>3号
+				<p>你选择了{{Messages}}号</p>
+				<h2>4.单选按钮</h2>
+				<select v-model="Message4">
+					<option disabled value="">请选择</option>
+					<option>A</option>
+					<option>B</option>
+					<option>C</option>
+					<option>D</option>
+				</select>
+				<p>你的答案是：{{Message4}}</p>
+				<p>多选绑定的是数组</p>
+				<!-- multiple静态列表选择-->
+				<select v-model="Message5" multiple style="width: 200px; height: 140px;">
+					<option disabled value="">按住鼠标拖动选择</option>
+					<option>A</option>
+					<option>B</option>
+					<option>C</option>
+					<option>D</option>
+					<option>E</option>
+					<option>F</option>
+					<option>G</option>
+				</select>
+				<p>你的答案是：{{Message5}}</p>
+				<!--上述改变的值为选项中的内容，使用下面这种 -->
+				<p>动态选项</p>
+			    <select v-model="Message7"/>
+			    <!--循环选项，创建表单 -->
+					<option v-for="item in Message6" v-bind:value="item.value">{{item.text}}</option>
+			    	<!--返回item.value值-->
+			    </select>
+				<p>{{Message7}}</p>
+				<h2>5.值绑定</h2>
+				<p>单选绑定</p>
+				<p>选择会改变值 Message1 = {{Message1}}<input type="radio" v-model="Message1"  value="9"/></p>
+				
+				
+				<select v-model="Message2">
+					<option value="改变">AAA</option>
+				</select>
+				<p>{{Message2}}</p>
+				
+				<input v-model="Message" type="checkbox" true-value = "yes"  false-value = "no"/>
+				<p>复选框是否点击：{{Message}}</p>
+				
+				<h2>6.修饰符</h2>
+				<p></p>
+				<!--延迟显示-->
+				<input v-model.lazy="Message1" />
+				<p>输入结束后才显示{{Message1}}</p>
+				<!--转换数字-->
+				<input v-model.number = "Message2" />
+				<p>显示{{Message2}}</p>
+				<!--过滤首尾空白字符-->
+				<input v-model.trim="Message2" />
+		</div>
+
+		
+		
+		
+		
+		
+		
+		
+		<script>
+			var vm = new Vue({
+				el : "#ex1",
+				data : {
+						Message : '',
+						Message1 : '',
+						Message2 : '',
+						Message3 : '',
+						Message4 : '',
+						Message5 : '',
+						Message6 : [
+						{text:'A',value : '这是第一个'},
+						{text:'B',value : '这是第二个'}
+						],
+						Message7 : '这是第一个',
+						Messages : [],
+				}
+			})
+		</script>
+	</body>
+</html>

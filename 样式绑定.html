@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+	</head>
+	<style>
+		.c4{
+			padding: 20px;
+			background: #FFFF00;
+			width: 120px;
+		}
+		.c5{
+			opacity: 0.6;
+		}
+		.c6{
+			box-shadow: 2px 2px black;
+		}
+	</style>
+	<body>
+		<div id="ex2">
+			<!--v-bind 设置属性 c4 的应用取决于 IsUse的值-->
+			<div v-bind:class="{c4 : IsUse}">
+				是否应用
+			</div>
+			<br>
+			<div v-bind:class="{c4 : IsUse, 'c5' : IsShowUse,'c6' : IsUse}" >
+				多个class引用
+			</div>
+			<br>
+			<button @click="change">点击应用样式与取消</button>
+			<br>
+			<hr>
+			<div v-bind:class="classUse">
+				对象引入法
+			</div>
+			<br>
+			<div v-bind:class="[className,IsUse]">
+				数组引入法1
+			</div>
+			<br>
+			<div v-bind:class="ArrayUse">
+				数组引入法2
+			</div>
+			<br>
+			
+			<div v-bind:style="classStyle">
+				内联对象模式
+			</div>
+			<div v-bind:style="[classStyle,bg]">
+				内联数组模式
+			</div>
+		</div>
+		<script>
+			var vm = new Vue({
+				el : "#ex2",
+				data : {
+					className : "c4",
+					IsUse : true,
+					IsShowUse : true,
+					classUse : {
+						c6 : true,
+						c4 : true,
+						c5 : true,
+						c4Use : true,
+						c5Use : true,
+						c6Use : true
+					},
+					classStyle : {
+						color : 'green',
+						width : '170px',
+						padding : '20px'
+					},
+					bg : {
+						background: '#FFFF00'
+					},
+					ArrayUse :['c4','true'],
+					colors : ['green','red','bule']
+				},			
+				methods : {
+					change : function(){
+						vm.$data.IsUse=!vm.$data.IsUse;
+						vm.$data.IsShowUse=!vm.$data.IsShowUse;
+					}
+				}
+			})
+		</script>
+	</body>
+</html>
