@@ -75,7 +75,11 @@
 * [3.Vue循环语句   ](https://github.com/Lumnca/StudyFrontEnd/blob/master/%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5.html)**主要内容：循环方式，对象循环，数组的定义与操作方法。**
 
 
+* [4.Vue监听属性](https://github.com/Lumnca/StudyFrontEnd/blob/master/%E7%9B%91%E5%90%AC%E5%B1%9E%E6%80%A7.html)**主要内容：事件处理，点击，键盘，鼠标事件**
 
+* [5.Vue表单绑定](https://github.com/Lumnca/StudyFrontEnd/blob/master/%E8%A1%A8%E5%8D%95%E7%BB%91%E5%AE%9A.html)**主要内容：表单的实时渲染**
+
+* [6.Vue样式绑定](https://github.com/Lumnca/StudyFrontEnd/blob/master/%E6%A0%B7%E5%BC%8F%E7%BB%91%E5%AE%9A.html)**样式的取用方式**
 
 
 
