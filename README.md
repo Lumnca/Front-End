@@ -17,8 +17,9 @@
 
 :books:**[JavaScript学习](http://www.runoob.com/js/js-tutorial.html)**
 
-**对于JavaScript学习网络资源不够完整，建议查看书籍，购买地址，可以购买更高版本：**
+:books:**[ECMAScript6](http://es6.ruanyifeng.com/#README)
 
+**对于JavaScript学习网络资源不够完整，建议查看书籍，购买地址：**
 
 :books:**[JavaScript高级程序设计](https://detail.tmall.com/item.htm?id=565462419446&ali_trackid=2:mm_47614295_4288816_317308348:1536500718_114_866180205&spm=a2e2e.10720394/c.90200100.1.12ce704clM99vJ)**
 
@@ -38,7 +39,7 @@
 
 # :monkey:学习笔记
 
-## Jquery ##
+## Jquery(可以不用学习) ##
 
 * [Jquery选择器](https://github.com/Lumnca/StudyFrontEnd/blob/master/%E9%80%89%E6%8B%A9%E5%99%A8.html)
 
