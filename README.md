@@ -17,7 +17,7 @@
 
 :books:**[JavaScript学习](http://www.runoob.com/js/js-tutorial.html)**
 
-:books:**[ECMAScript6](http://es6.ruanyifeng.com/#README)
+:books:**[ECMAScript6](http://es6.ruanyifeng.com/#README)**
 
 **对于JavaScript学习网络资源不够完整，建议查看书籍，购买地址：**
 
